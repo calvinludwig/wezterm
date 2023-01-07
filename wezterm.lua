@@ -33,14 +33,25 @@ local keymap = {
     },
 }
 
+local colors = require("lua.rose-pine").colors()
+local window_frame = require("lua.rose-pine").window_frame()
+
 return {
     keys = keymap,
-    color_scheme = "Catppuccin Macchiato",
-    font_size = 17.5,
+    colors = colors,
+    window_frame = window_frame,
+    font_size = 16,
+    line_height = 1.4,
     font = wezterm.font_with_fallback({
-        "Iosevka Curly Slab",
         "JetbrainsMono Nerd Font",
     }),
+    window_padding = {
+        left = 0,
+        right = 0,
+        top = 0,
+        bottom = 0,
+    },
     tab_bar_at_bottom = true,
     use_fancy_tab_bar = false,
+    tab_max_width = 40,
 }
