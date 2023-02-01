@@ -10,7 +10,7 @@ return {
 		'SF Mono',
 		'JetbrainsMono Nerd Font',
 	},
-	window_background_opacity = 0.9,
+	window_background_opacity = 1,
 	window_padding = {
 		left = 8,
 		right = 8,
@@ -24,7 +24,7 @@ return {
 	audible_bell = 'Disabled',
 	show_new_tab_button_in_tab_bar = false,
 	hide_tab_bar_if_only_one_tab = true,
-	front_end = "WebGpu",
+	-- front_end = "WebGpu",
 	keys = {
 		{
 			key = '|',
@@ -56,5 +56,9 @@ return {
 			mods = 'ALT|SHIFT',
 			action = wezterm.action.ActivatePaneDirection 'Right',
 		},
+		{
+			key = 'F11',
+			action = wezterm.action.ToggleFullScreen,
+		}
 	},
 }
