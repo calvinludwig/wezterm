@@ -1,16 +1,14 @@
 local wezterm = require 'wezterm'
 
-local colors = require('lua.colorscheme').colors()
-
 return {
-	colors = colors,
+	color_scheme = "Catppuccin Frappe",
 	font_size = 16.5,
 	line_height = 1,
 	font = wezterm.font_with_fallback {
 		'SF Mono',
 		'JetbrainsMono Nerd Font',
 	},
-	window_background_opacity = 1,
+	-- window_background_opacity = 0.9,
 	window_padding = {
 		left = 8,
 		right = 8,
@@ -24,7 +22,7 @@ return {
 	audible_bell = 'Disabled',
 	show_new_tab_button_in_tab_bar = false,
 	hide_tab_bar_if_only_one_tab = true,
-	-- front_end = "WebGpu",
+	front_end = "WebGpu",
 	keys = {
 		{
 			key = '|',
