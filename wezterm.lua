@@ -27,11 +27,12 @@ local colors = require('lua/rose-pine').colors()
 
 return {
 	colors = colors,
-	font_size = 16.5,
+	font_size = 15,
 	line_height = 1,
 	font = wezterm.font_with_fallback {
-		'JetBrains Mono',
-		'JetbrainsMono Nerd Font',
+		'Cascadia Code',
+		'Jetbrains Mono',
+		{ family = 'Symbols Nerd Font Mono', scale = 0.75 },
 	},
 	window_padding = {
 		left = 0,
@@ -39,6 +40,7 @@ return {
 		top = 0,
 		bottom = 0,
 	},
+	window_decorations = 'RESIZE',
 	tab_bar_at_bottom = false,
 	use_fancy_tab_bar = false,
 	tab_max_width = 999,
