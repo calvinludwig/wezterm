@@ -1,38 +1,31 @@
 local wezterm = require 'wezterm'
 
-local catppuccin_frappe = {
-	Peach = '#ef9f76',
-	Text = '#c6d0f5',
-	Subtext1 = '#b5bfe2',
-	Subtext0 = '#a5adce',
-	Overlay2 = '#949cbb',
-	Overlay1 = '#838ba7',
-	Overlay0 = '#737994',
-	Surface2 = '#626880',
-	Surface1 = '#51576d',
-	Surface0 = '#414559',
-	Base = '#303446',
-	Mantle = '#292c3c',
-	Crust = '#232634',
-}
-
 wezterm.on('update-right-status', function(window)
 	window:set_right_status(wezterm.format {
-		{ Attribute = { Intensity = 'Bold' } },
-		{ Text = wezterm.strftime ' %A, %d %B %Y %I:%M %p ' },
+		{
+			Attribute = {
+				Intensity = 'Bold',
+			},
+		},
+		{
+			Text = wezterm.strftime ' %A, %d %B %Y %I:%M %p ',
+		},
 	})
 end)
 
-local colors = require('lua/rose-pine').colors()
+local colors = require('lua/theme').colors()
 
 return {
+	color_scheme = 'Gruvbox Material (Gogh)',
 	colors = colors,
 	font_size = 15,
 	line_height = 1,
 	font = wezterm.font_with_fallback {
-		'Cascadia Code',
-		'Jetbrains Mono',
-		{ family = 'Symbols Nerd Font Mono', scale = 0.75 },
+		'Jetbrains Mono Medium',
+		{
+			family = 'Symbols Nerd Font Mono',
+			scale = 0.75,
+		},
 	},
 	window_padding = {
 		left = 0,
@@ -40,25 +33,27 @@ return {
 		top = 0,
 		bottom = 0,
 	},
-	window_decorations = 'RESIZE',
-	tab_bar_at_bottom = false,
+	tab_bar_at_bottom = true,
 	use_fancy_tab_bar = false,
 	tab_max_width = 999,
 	enable_wayland = false,
 	audible_bell = 'Disabled',
 	show_new_tab_button_in_tab_bar = false,
 	hide_tab_bar_if_only_one_tab = true,
-	front_end = 'WebGpu',
 	keys = {
 		{
 			key = '|',
 			mods = 'ALT|SHIFT',
-			action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+			action = wezterm.action.SplitHorizontal {
+				domain = 'CurrentPaneDomain',
+			},
 		},
 		{
 			key = '_',
 			mods = 'ALT|SHIFT',
-			action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+			action = wezterm.action.SplitVertical {
+				domain = 'CurrentPaneDomain',
+			},
 		},
 		{
 			key = 'j',
