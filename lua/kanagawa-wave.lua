@@ -1,47 +1,47 @@
 local M = {}
 
 local active_tab = {
-	bg_color = '#181616',
-	fg_color = '#c5c9c5',
+	bg_color = '#1F1F28',
+	fg_color = '#DCD7BA',
 }
 
 local inactive_tab = {
-	bg_color = '#181616',
-	fg_color = '#393836',
+	bg_color = '#1F1F28',
+	fg_color = '#363646',
 }
 
 function M.colors()
 	return {
-		foreground = '#dcd7ba',
-		background = '#181616',
+		foreground = '#DCD7BA',
+		background = '#1F1F28',
 		cursor_bg = '#FF9E3B',
 		cursor_border = '#FF9E3B',
-		cursor_fg = '#1f1f28',
-		selection_bg = '#393836',
+		cursor_fg = '#1F1F28',
+		selection_bg = '#223249',
 
 		ansi = {
-			'#0d0c0c',
-			'#c4746e',
-			'#8a9a7b',
-			'#c4b28a',
-			'#8ba4b0',
-			'#a292a3',
-			'#8ea4a2',
-			'#9e9b93',
+			'#16161D',
+			'#C34043',
+			'#76946A',
+			'#C0A36E',
+			'#7E9CD8',
+			'#957FB8',
+			'#6A9589',
+			'#C8C093',
 		},
 		brights = {
-			'#12120f',
-			'#E46876',
-			'#87a987',
+			'#727169',
+			'#E82424',
+			'#98BB6C',
 			'#E6C384',
 			'#7FB4CA',
 			'#938AA9',
 			'#7AA89F',
-			'#a6a69c',
+			'#DCD7BA',
 		},
 
 		tab_bar = {
-			background = '#181616',
+			background = '#1F1F28',
 			active_tab = active_tab,
 			inactive_tab = inactive_tab,
 			inactive_tab_hover = active_tab,

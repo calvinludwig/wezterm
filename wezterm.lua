@@ -1,26 +1,14 @@
 local wezterm = require 'wezterm'
 
-wezterm.on('update-right-status', function(window)
-	window:set_right_status(wezterm.format {
-		{
-			Attribute = {
-				Intensity = 'Bold',
-			},
-		},
-		{
-			Text = wezterm.strftime ' %A, %d %B %Y %I:%M %p ',
-		},
-	})
-end)
-
-local colors = require('lua/kanagawa-dragon').colors()
+local colors = require('lua/rose-pine-moon').colors()
 
 return {
 	colors = colors,
 	font_size = 18,
 	line_height = 1,
+	window_background_opacity = 1,
 	font = wezterm.font_with_fallback {
-		'Iosevka Term',
+		'Iosevka Term Medium',
 		{
 			family = 'Symbols Nerd Font Mono',
 			scale = 0.75,
@@ -40,7 +28,7 @@ return {
 	-- enable_wayland = false,
 	audible_bell = 'Disabled',
 	show_new_tab_button_in_tab_bar = false,
-	hide_tab_bar_if_only_one_tab = false,
+	hide_tab_bar_if_only_one_tab = true,
 	keys = {
 		{
 			key = '|',
