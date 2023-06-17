@@ -1,6 +1,5 @@
 local wezterm = require 'wezterm'
-
-local colors = require('lua/rose-pine-moon').colors()
+local colors = require('lua/melange-light').colors()
 
 return {
 	colors = colors,
@@ -8,12 +7,16 @@ return {
 	line_height = 1,
 	window_background_opacity = 1,
 	font = wezterm.font_with_fallback {
-		'Iosevka Term Medium',
+		'Iosevka Term',
 		{
 			family = 'Symbols Nerd Font Mono',
-			scale = 0.75,
+			scale = 0.8,
+		},
+		{
+			family = 'nonicons',
 		},
 	},
+	font_rules = {},
 	default_cursor_style = 'BlinkingUnderline',
 	cursor_blink_rate = 400,
 	window_padding = {
@@ -22,6 +25,7 @@ return {
 		top = 0,
 		bottom = 0,
 	},
+	warn_about_missing_glyphs = false,
 	tab_bar_at_bottom = true,
 	use_fancy_tab_bar = false,
 	tab_max_width = 999,

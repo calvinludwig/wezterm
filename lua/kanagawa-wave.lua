@@ -6,7 +6,7 @@ local active_tab = {
 }
 
 local inactive_tab = {
-	bg_color = '#1F1F28',
+	bg_color = '#1a1a22',
 	fg_color = '#363646',
 }
 
@@ -41,7 +41,7 @@ function M.colors()
 		},
 
 		tab_bar = {
-			background = '#1F1F28',
+			background = '#1a1a22',
 			active_tab = active_tab,
 			inactive_tab = inactive_tab,
 			inactive_tab_hover = active_tab,
