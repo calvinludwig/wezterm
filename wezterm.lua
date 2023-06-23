@@ -1,5 +1,5 @@
 local wezterm = require 'wezterm'
-local colors = require('lua/melange-light').colors()
+local colors = require('lua/kanagawa-wave').colors()
 
 return {
 	colors = colors,
@@ -7,13 +7,10 @@ return {
 	line_height = 1,
 	window_background_opacity = 1,
 	font = wezterm.font_with_fallback {
-		'Iosevka Term',
+		'Iosevka',
 		{
-			family = 'Symbols Nerd Font Mono',
+			family = 'Symbols Nerd Font',
 			scale = 0.8,
-		},
-		{
-			family = 'nonicons',
 		},
 	},
 	font_rules = {},
