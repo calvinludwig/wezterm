@@ -41,7 +41,7 @@ function M.colors()
 		},
 
 		tab_bar = {
-			background = '#E9E1DB',
+			background = '#ff00ff',
 			active_tab = active_tab,
 			inactive_tab = inactive_tab,
 			inactive_tab_hover = active_tab,

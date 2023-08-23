@@ -1,16 +1,17 @@
 local wezterm = require 'wezterm'
-local colors = require('lua/melange-light').colors()
+local colors = require('lua/terafox').colors()
 local keys = require("lua/keys")
 
 return {
 	colors = colors,
-	font_size = 18,
+	font_size = 20,
 	window_background_opacity = 1,
 	font = wezterm.font_with_fallback {
-		{ family = 'Iosevka Term',      stretch = "Expanded", weight = 'Regular' },
-		-- 'Dank Mono',
-		{ family = 'Noto Color Emoji',  scale = 0.8, },
+		{ family = 'JetBrains Mono',    weight = 'Medium' },
+		-- { family = 'Iosevka Term',      stretch = "Expanded", weight = 'Medium' },
+		{ family = 'nonicons',          scale = 1, },
 		{ family = 'Symbols Nerd Font', scale = 0.8, },
+		{ family = 'Noto Color Emoji',  scale = 0.8, },
 	},
 	font_rules = {},
 	default_cursor_style = 'BlinkingUnderline',
@@ -26,11 +27,14 @@ return {
 	-- enable_wayland = false,
 	audible_bell = 'Disabled',
 	visual_bell = {
-		fade_in_duration_ms = 75,
-		fade_out_duration_ms = 75,
-		target = "CursorColor",
+		fade_in_function = 'EaseIn',
+		fade_in_duration_ms = 50,
+		fade_out_function = 'EaseOut',
+		fade_out_duration_ms = 50,
 	},
 	show_new_tab_button_in_tab_bar = false,
 	hide_tab_bar_if_only_one_tab = true,
 	keys = keys,
+	disable_default_key_bindings = true,
+	enable_tab_bar = false,
 }
