@@ -4,10 +4,12 @@ local keys = require("lua/keys")
 
 return {
 	colors = colors,
-	font_size = 20,
+	font_size = 20.5,
 	window_background_opacity = 1,
 	font = wezterm.font_with_fallback {
+		{ family = 'IBM Plex Mono',    weight = 'Medium' },
 		{ family = 'JetBrains Mono',    weight = 'Medium' },
+		{ family = 'nonicons',          scale = 1, },
 		{ family = 'Symbols Nerd Font', scale = 0.8, },
 		{ family = 'Noto Color Emoji',  scale = 0.8, },
 	},
