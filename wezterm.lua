@@ -8,8 +8,6 @@ return {
 	window_background_opacity = 1,
 	font = wezterm.font_with_fallback {
 		{ family = 'JetBrains Mono',    weight = 'Medium' },
-		-- { family = 'Iosevka Term',      stretch = "Expanded", weight = 'Medium' },
-		{ family = 'nonicons',          scale = 1, },
 		{ family = 'Symbols Nerd Font', scale = 0.8, },
 		{ family = 'Noto Color Emoji',  scale = 0.8, },
 	},
