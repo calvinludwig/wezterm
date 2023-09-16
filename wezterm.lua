@@ -1,5 +1,5 @@
 local wezterm = require 'wezterm'
-local colors = require('lua/terafox').colors()
+local colors = require('lua/onedark-darker').colors()
 local keys = require("lua/keys")
 
 return {
@@ -7,9 +7,7 @@ return {
 	font_size = 17,
 	window_background_opacity = 1,
 	font = wezterm.font_with_fallback {
-		{ family = 'IBM Plex Mono',     weight = 'Regular' },
-		{ family = 'JetBrains Mono',    weight = 'Regular' },
-		{ family = 'nonicons',          scale = 1, },
+		{ family = 'Jetbrains Mono',    weight = 'Light' },
 		{ family = 'Symbols Nerd Font', scale = 0.8, },
 		{ family = 'Noto Color Emoji',  scale = 0.8, },
 	},
@@ -26,12 +24,6 @@ return {
 	tab_max_width = 999,
 	-- enable_wayland = false,
 	audible_bell = 'Disabled',
-	visual_bell = {
-		fade_in_function = 'EaseIn',
-		fade_in_duration_ms = 50,
-		fade_out_function = 'EaseOut',
-		fade_out_duration_ms = 50,
-	},
 	show_new_tab_button_in_tab_bar = false,
 	hide_tab_bar_if_only_one_tab = true,
 	keys = keys,
