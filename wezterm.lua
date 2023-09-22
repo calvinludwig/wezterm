@@ -1,15 +1,19 @@
 local wezterm = require 'wezterm'
-local colors = require('lua/onedark-darker').colors()
-local keys = require("lua/keys")
+-- local colors = require('lua/rose-pine-moon').colors()
+local keys = require 'lua/keys'
 
 return {
-	colors = colors,
-	font_size = 17,
+	color_scheme = "Catppuccin Macchiato",
+	font_size = 19,
 	window_background_opacity = 1,
 	font = wezterm.font_with_fallback {
-		{ family = 'Jetbrains Mono',    weight = 'Light' },
-		{ family = 'Symbols Nerd Font', scale = 0.8, },
-		{ family = 'Noto Color Emoji',  scale = 0.8, },
+		{
+			family = 'Cascadia Code',
+			weight = 'Regular',
+			harfbuzz_features = { 'ss01' }
+		},
+		{ family = 'Symbols Nerd Font', scale = 0.8 },
+		{ family = 'Noto Color Emoji',  scale = 0.8 },
 	},
 	font_rules = {},
 	default_cursor_style = 'BlinkingUnderline',
