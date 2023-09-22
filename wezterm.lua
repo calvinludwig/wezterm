@@ -1,5 +1,4 @@
 local wezterm = require 'wezterm'
--- local colors = require('lua/rose-pine-moon').colors()
 local keys = require 'lua/keys'
 
 return {
