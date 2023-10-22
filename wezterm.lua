@@ -2,14 +2,13 @@ local wezterm = require 'wezterm'
 local keys = require 'lua/keys'
 
 return {
-	color_scheme = "Catppuccin Macchiato",
-	font_size = 19,
+	color_scheme = "Catppuccin Mocha",
+	font_size = 20,
 	window_background_opacity = 1,
 	font = wezterm.font_with_fallback {
 		{
-			family = 'Cascadia Code',
+			family = 'JetBrains Mono',
 			weight = 'Regular',
-			harfbuzz_features = { 'ss01' }
 		},
 		{ family = 'Symbols Nerd Font', scale = 0.8 },
 		{ family = 'Noto Color Emoji',  scale = 0.8 },
